@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NameComponent from './components/NameComponent'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <p>Hello</p>
-      </div>
-    );
-  }
+
+    componentDidMount(){
+        console.log("mounted")
+    }
+    render() {
+        return (
+        <div className="App">
+            <p>Hello</p>
+            <div>
+                <NameComponent/>
+                <button onClick={ () => {console.log("Hey")}}>Hey</button>
+            </div>
+        </div>
+        );
+    }
 }
 
 export default App;
