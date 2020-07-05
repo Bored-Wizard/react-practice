@@ -5,13 +5,15 @@ class NameComponemt extends Component {
         console.log("mounted")
     }
   render() {
-    return (
-      <div className="App">
-        <h2>
-            Hello world! This is the second component.
-        </h2>
-      </div>
-    );
+        const textc = this.props.textc;
+        return (
+        <div className="App">
+            <h2>
+                {textc} \n
+                Hello world! This is the second component.
+            </h2>
+        </div>
+        );
   }
 }
 
