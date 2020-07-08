@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav,Navbar, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Nav,Navbar, NavDropdown } from 'react-bootstrap';
 
 class App extends Component {
 
@@ -19,7 +19,17 @@ class App extends Component {
     }
 
     componentDidMount(){
-        console.log("mounted")
+        fetch('https://www.json-generator.com/api/json/get/bPsDuslhYO?indent=2',{
+            method: 'GET'
+        }
+        )
+        .then(response => response.json)
+        .then(json => {
+            console.log(json)
+        })
+        .catch(error => {
+            console.log(error)
+        });
     }
     render() {
         return (
